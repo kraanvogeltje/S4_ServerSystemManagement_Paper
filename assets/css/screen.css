@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'Helvetica-Black';
+    src: url("../fonts/Helvetica-Black Black.ttf");
+    font-style: normal;
+}
+
+body {
+    font-family: Helvetica-Black, Arial, sans-serif;
+}
+
+main {
+    background-color: #ffc72c;
+    color: #da291c;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 3rem;
+}
+
+h1 {
+    width: 30rem;
+    font-size: 6rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4rem;
+}
+
+main img {
+    max-height: 10rem;
+}
+
+footer {
+    height: 10rem;
+    width: 100%;
+    background-color: #da291c;
+    color: #ffc72c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer img {
+    max-height: 100%;
+    align-content: start;
+}
+
+footer p {
+    font-size: 4rem;
+
+}
+
