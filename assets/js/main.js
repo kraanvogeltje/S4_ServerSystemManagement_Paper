@@ -2,17 +2,16 @@ document.addEventListener('DOMContentLoaded', init);
 
 function init() {
     const menuTypes = document.querySelector('#menuTypes');
-    const foodItems = document.querySelector('#foodItems')
+    const foodArticles = document.querySelector('#foodItems')
     // addEventListener()
-    loadMenuTypes(menuTypes)
+    loadMenuTypes(menuTypes, foodItems)
 }
 
 
-function loadMenuTypes(menuTypes) {
+function loadMenuTypes(menuTypes, foodArticles) {
     fetch('../assets/data/menu.json')
         .then(response => response.json())
-        .then(data => {
-            const menuItems = data;
+        .then(menuItems => {
             const uniqueTypes = getUniqueTypes(menuItems);
 
             // Create list items for menu types
@@ -20,7 +19,7 @@ function loadMenuTypes(menuTypes) {
                 const listItem = document.createElement('li');
                 listItem.textContent = type;
                 listItem.addEventListener('click', function() {
-                    displayMenuItemsByType(type);
+                    displayMenuItemsByType(type, menuItems, foodArticles);
                 });
                 menuTypes.appendChild(listItem);
             });
@@ -28,8 +27,25 @@ function loadMenuTypes(menuTypes) {
         .catch(error => console.log(error));
 }
 
-function displayMenuItemsByType(type) {
-    console.log(type)
+function displayMenuItemsByType(type, menuItems, foodArticles) {
+    foodArticles.innerHTML = `<h2>${type}</h2>`;
+    const filteredItems = menuItems;
+
+    filteredItems.forEach(item => {
+        if (item.type === type) {
+            const menuItem = document.createElement('article');
+            const menuName = document.createElement('h4')
+            const menuPrice = document.createElement('p')
+            // const menuImage = document.createElement("img")
+
+            menuName.textContent = item.name
+            menuPrice.textContent = item.cost
+            menuItem.appendChild(menuName)
+            menuItem.appendChild(menuPrice)
+            // menuItem.appendChild(menuImage)
+            foodArticles.appendChild(menuItem)
+        }
+    })
 }
 
 
