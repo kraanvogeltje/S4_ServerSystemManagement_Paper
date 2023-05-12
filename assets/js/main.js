@@ -1,14 +1,25 @@
+'use strict'
 document.addEventListener('DOMContentLoaded', init);
 
+const menuTypes = document.querySelector('#menuTypes');
+const foodArticlesHeader = document.querySelector(`#foodItemsHeader`)
+const foodArticles = document.querySelector('#foodItems');
+const backButton = document.querySelector('.back');
+
 function init() {
-    const menuTypes = document.querySelector('#menuTypes');
-    const foodArticles = document.querySelector('#foodItems')
-    // addEventListener()
-    loadMenuTypes(menuTypes, foodItems)
+    addEventListeners()
+    loadMenuTypes()
 }
 
+function addEventListeners() {
+    backButton.addEventListener('click', goToStart())
+}
 
-function loadMenuTypes(menuTypes, foodArticles) {
+function goToStart(){
+    console.log('go back')
+}
+
+function loadMenuTypes() {
     fetch('../assets/data/menu.json')
         .then(response => response.json())
         .then(menuItems => {
@@ -19,7 +30,7 @@ function loadMenuTypes(menuTypes, foodArticles) {
                 const listItem = document.createElement('li');
                 listItem.textContent = type;
                 listItem.addEventListener('click', function() {
-                    displayMenuItemsByType(type, menuItems, foodArticles);
+                    displayMenuItemsByType(type, menuItems);
                 });
                 menuTypes.appendChild(listItem);
             });
@@ -27,11 +38,11 @@ function loadMenuTypes(menuTypes, foodArticles) {
         .catch(error => console.log(error));
 }
 
-function displayMenuItemsByType(type, menuItems, foodArticles) {
-    foodArticles.innerHTML = `<h2>${type}</h2>`;
-    const filteredItems = menuItems;
+function displayMenuItemsByType(type, menuItems) {
+    foodArticlesHeader.innerHTML = type;
+    foodArticles.innerHTML = ''
 
-    filteredItems.forEach(item => {
+    menuItems.forEach(item => {
         if (item.type === type) {
             const menuItem = document.createElement('article');
             const menuName = document.createElement('h4')
@@ -51,7 +62,6 @@ function displayMenuItemsByType(type, menuItems, foodArticles) {
     })
 }
 
-
 function getUniqueTypes(menuItems) {
     const typesSet = new Set();
     menuItems.forEach(item => {
@@ -63,10 +73,3 @@ function getUniqueTypes(menuItems) {
 function addFoodToList(foodItem) {
     console.log(foodItem)
 }
-
-
-
-
-
-
-
