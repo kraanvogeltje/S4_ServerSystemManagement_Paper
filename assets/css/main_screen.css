@@ -40,6 +40,10 @@ aside {
     width: 29%;
 }
 
+aside .selected {
+    font-weight: bold;
+}
+
 section {
     width: 69%;
 }
