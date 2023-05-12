@@ -3,8 +3,14 @@
 document.addEventListener('DOMContentLoaded', init)
 
 function init() {
-    console.log('starting kiosk')
-
+    document.querySelector('body').addEventListener("click", goToMain)
 }
+
+function goToMain() {
+    window.location.href = "pages/main_screen.html";
+}
+
+
+
 
 
