@@ -43,6 +43,9 @@ function displayMenuItemsByType(type, menuItems, foodArticles) {
             menuItem.appendChild(menuName)
             menuItem.appendChild(menuPrice)
             // menuItem.appendChild(menuImage)
+            menuItem.addEventListener('click', function (f) {
+                addFoodToList(item);
+            })
             foodArticles.appendChild(menuItem)
         }
     })
@@ -57,6 +60,9 @@ function getUniqueTypes(menuItems) {
     return Array.from(typesSet);
 }
 
+function addFoodToList(foodItem) {
+    console.log(foodItem)
+}
 
 
 
