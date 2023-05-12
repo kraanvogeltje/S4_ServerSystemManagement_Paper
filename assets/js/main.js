@@ -5,28 +5,29 @@ const menuTypes = document.querySelector('#menuTypes');
 const foodArticlesHeader = document.querySelector(`#foodItemsHeader`)
 const foodArticles = document.querySelector('#foodItems');
 const backButton = document.querySelector('.back');
+const myOrder = document.querySelector(`.myOrder`);
 
 function init() {
-    addEventListeners()
-    loadMenuTypes()
+    addEventListeners();
+    loadMenuTypes();
 }
 
 function addEventListeners() {
-    backButton.addEventListener('click', goToStart)
+    backButton.addEventListener('click', goToStart);
 
 }
 
 function goToStart(){
-    console.log('go back')
+    console.log('go back');
 }
 
 function selectType(type) {
     document.querySelectorAll(`#menuTypes li`).forEach(
         li_type => {
             if (li_type === type) {
-                li_type.classList.add("selected")
+                li_type.classList.add("selected");
             } else {
-                li_type.classList.remove("selected")
+                li_type.classList.remove("selected");
             }
         }
     )
@@ -67,6 +68,8 @@ function displayMenuItemsByType(type, menuItems) {
             const menuImage = document.createElement("img");
             const menuPrice = document.createElement('p');
 
+
+
             menuName.textContent = item.name;
             menuPrice.textContent = item.cost;
             menuImage.src = `../assets/media/${item.image}`;
@@ -74,10 +77,12 @@ function displayMenuItemsByType(type, menuItems) {
             menuItem.appendChild(menuName);
             menuItem.appendChild(menuImage);
             menuItem.appendChild(menuPrice);
+
+            foodArticles.appendChild(menuItem);
+
             menuItem.addEventListener('click', function () {
-                addFoodToList(item);
+                addFoodToList(menuItem);
             })
-            foodArticles.appendChild(menuItem)
         }
     })
 }
@@ -91,5 +96,5 @@ function getUniqueTypes(menuItems) {
 }
 
 function addFoodToList(foodItem) {
-    console.log(foodItem);
+    console.log(foodItem)
 }
