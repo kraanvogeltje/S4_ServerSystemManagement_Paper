@@ -3,9 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>main_screen</title>
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/main_screen.css">
+    <script src="../assets/js/main.js" type="module"></script>
 </head>
 <body>
-<h1>main</h1>
+<header>
+    <img src="../images/McDonalds_Logo.png" alt="MCDO-logo">
+    <h1>SPECIALS</h1>
+</header>
+<main>
+    <h2>Our menu</h2>
+    <button class="back">BACK</button>
+    <div id="mainBody">
+        <aside>
+            <nav id="menuTypes">
+                <ul>
+                    <!-- all menu types will be added here -->
+                </ul>
+            </nav>
+        </aside>
+        <section>
+            <h2 id="foodItemsHeader"></h2>
+            <div id="foodItems"></div>
+            <!-- food items will be added here -->
+        </section>
+    </div>
+</main>
+<footer>
+    <h3>My order</h3>
+    <div class="myOrder">
+        <!-- selected Food items come here -->
+    </div>
+</footer>
 
 </body>
 </html>

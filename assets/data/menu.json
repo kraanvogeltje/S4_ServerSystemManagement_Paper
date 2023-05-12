@@ -1,0 +1,170 @@
+[
+  {
+    "type": "Burger",
+    "name": "Maestro Spicy Santiago",
+    "cost": 3.20,
+    "image": "MaestroSpicySantiago.png"
+  },
+  {
+    "type": "Burger",
+    "name": "Hamburger",
+    "cost": 3.20,
+    "image": "hamburger.jpg"
+  },
+  {
+    "type": "Burger",
+    "name": "Cheeseburger",
+    "cost": 3.20,
+    "image": "cheeseburger.jpg"
+  },
+  {
+    "type": "Burger",
+    "name": "McFish",
+    "cost": 3.20,
+    "image": "mcfish.png"
+  },
+  {
+    "type": "Burger",
+    "name": "Royal Cheese",
+    "cost": 3.20,
+    "image": "RoyalCheese.png"
+  },
+  {
+    "type": "McMomentje",
+    "name": "chicken McNuggets",
+    "cost": 3.20,
+    "image": "Chicken-nugget.png"
+  },
+  {
+    "type": "McMomentje",
+    "name": "filet-O-Fish",
+    "cost": 3.20,
+    "image": "filet-o-fish.png"
+  },
+  {
+    "type": "McMomentje",
+    "name": "Brasil Cheese",
+    "cost": 3.20,
+    "image": "Brazil-chicken.png"
+  },
+  {
+    "type": "Happy Meal",
+    "name": "Happy Meal 4 Chicken McNuggets",
+    "cost": 3.20,
+    "image": "HMMcNuggets.png"
+  },
+  {
+    "type": "Happy Meal",
+    "name": "Happy Meal Hamburger",
+    "cost": 3.20,
+    "image": "HMMcNuggets.png"
+  },
+  {
+    "type": "Veggie",
+    "name": "McVeggie",
+    "cost": 3.20,
+    "image": "McVeggie.png"
+  },
+  {
+    "type": "Veggie",
+    "name": "Veggie Deluxe",
+    "cost": 3.20,
+    "image": "Veggie-De-Luxe.jpg"
+  },
+  {
+    "type": "Sauzen",
+    "name": "Ketchup",
+    "cost": 3.20,
+    "image": "ketchup.png"
+  },
+  {
+    "type": "Sauzen",
+    "name": "Mayonaise",
+    "cost": 3.20,
+    "image": "mayonaise.png"
+  },
+  {
+    "type": "Sauzen",
+    "name": "Barbecuesaus",
+    "cost": 3.20,
+    "image": "barbecuesaus.png"
+  },
+  {
+    "type": "Sauzen",
+    "name": "Kerrie Saus",
+    "cost": 3.20,
+    "image": "kerrie-saus.png"
+  },
+  {
+    "type": "Sauzen",
+    "name": "Frietsaus",
+    "cost": 3.20,
+    "image": "frietsaus.png"
+  },
+  {
+    "type": "Desserten",
+    "name": "Macaron",
+    "cost": 3.20,
+    "image": "macarons.png"
+  },
+  {
+    "type": "Desserten",
+    "name": "Milkshake",
+    "cost": 3.20,
+    "image": "Milkshake.jpg"
+  },
+  {
+    "type": "Desserten",
+    "name": "Actimel",
+    "cost": 3.20,
+    "image": "mcdo-actimel.png"
+  },
+  {
+    "type": "Desserten",
+    "name": "Vers fruit:appel",
+    "cost": 3.20,
+    "image": "apple.jpg"
+  },
+  {
+    "type": "Desserten",
+    "name": "Ijshoorn",
+    "cost": 3.20,
+    "image": "ijshoorn.png"
+  },
+  {
+    "type": "Dranken",
+    "name": "Coca-Cola",
+    "cost": 3.20,
+    "image": "coca-cola.png"
+  },
+  {
+    "type": "Dranken",
+    "name": "Coca-Cola zero",
+    "cost": 3.20,
+    "image": "coca-cola-zero.png"
+  },
+  {
+    "type": "Dranken",
+    "name": "Fanta Orange",
+    "cost": 3.20,
+    "image": "fanta-orange.png"
+  },
+  {
+    "type": "Dranken",
+    "name": "Sprite",
+    "cost": 3.20,
+    "image": "sprite.png"
+  },
+  {
+    "type": "Dranken",
+    "name": "Perrier",
+    "cost": 3.20,
+    "image": "perrier.jpg"
+  },
+  {
+    "type": "Dranken",
+    "name": "Vittel",
+    "cost": 3.20,
+    "image": "vittel.jpg"
+  }
+]

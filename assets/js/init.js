@@ -9,8 +9,3 @@ function init() {
 function goToMain() {
     window.location.href = "pages/main_screen.html";
 }
-
-
-
-
-
