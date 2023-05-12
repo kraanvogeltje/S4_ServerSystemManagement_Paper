@@ -1,0 +1,142 @@
+[
+  {
+    "type": "Burger",
+    "name": "Maestro Spicy Santiago",
+    "cost": 3.20
+  },
+  {
+    "type": "Burger",
+    "name": "Hamburger",
+    "cost": 3.20
+  },
+  {
+    "type": "Burger",
+    "name": "Cheeseburger",
+    "cost": 3.20
+  },
+  {
+    "type": "Burger",
+    "name": "McFish",
+    "cost": 3.20
+  },
+  {
+    "type": "Burger",
+    "name": "Royal Cheese",
+    "cost": 3.20
+  },
+  {
+    "type": "McMomentje",
+    "name": "chicken McNuggets",
+    "cost": 3.20
+  },
+  {
+    "type": "McMomentje",
+    "name": "filet-O-Fish",
+    "cost": 3.20
+  },
+  {
+    "type": "McMomentje",
+    "name": "Brasil Cheese",
+    "cost": 3.20
+  },
+  {
+    "type": "Happy Meal",
+    "name": "Happy Meal 4 Chicken McNuggets",
+    "cost": 3.20
+  },
+  {
+    "type": "Happy Meal",
+    "name": "Happy Meal Hamburger",
+    "cost": 3.20
+  },
+  {
+    "type": "Veggie",
+    "name": "McVeggie",
+    "cost": 3.20
+  },
+  {
+    "type": "Veggie",
+    "name": "Veggie Deluxe",
+    "cost": 3.20
+  },
+  {
+    "type": "Sauzen",
+    "name": "Kethup",
+    "cost": 3.20
+  },
+  {
+    "type": "Sauzen",
+    "name": "Moyonaise",
+    "cost": 3.20
+  },
+  {
+    "type": "Sauzen",
+    "name": "Barbecuesaus",
+    "cost": 3.20
+  },
+  {
+    "type": "Sauzen",
+    "name": "Kerrie Saus",
+    "cost": 3.20
+  },
+  {
+    "type": "Sauzen",
+    "name": "Frietsaus",
+    "cost": 3.20
+  },
+  {
+    "type": "Desserten",
+    "name": "Macaron",
+    "cost": 3.20
+  },
+  {
+    "type": "Desserten",
+    "name": "Milkshake",
+    "cost": 3.20
+  },
+  {
+    "type": "Desserten",
+    "name": "Actimel",
+    "cost": 3.20
+  },
+  {
+    "type": "Desserten",
+    "name": "Vers fruit:appel",
+    "cost": 3.20
+  },
+  {
+    "type": "Desserten",
+    "name": "Ijshoorn",
+    "cost": 3.20
+  },
+  {
+    "type": "Dranken",
+    "name": "Coca-Cola",
+    "cost": 3.20
+  },
+  {
+    "type": "Dranken",
+    "name": "Coca-Cola zero",
+    "cost": 3.20
+  },
+  {
+    "type": "Dranken",
+    "name": "Fanta Orange",
+    "cost": 3.20
+  },
+  {
+    "type": "Dranken",
+    "name": "Sprite",
+    "cost": 3.20
+  },
+  {
+    "type": "Dranken",
+    "name": "Perrier",
+    "cost": 3.20
+  },
+  {
+    "type": "Dranken",
+    "name": "Vittel",
+    "cost": 3.20
+  }
+]
