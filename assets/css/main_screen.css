@@ -68,6 +68,10 @@ section article {
     margin-bottom: 4rem;
 }
 
+section article img {
+    max-width: 80%;
+}
+
 footer {
     /*background-color: #da291c;*/
     /*color: #ffc72c;*/

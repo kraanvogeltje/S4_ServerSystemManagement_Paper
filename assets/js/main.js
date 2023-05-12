@@ -63,15 +63,17 @@ function displayMenuItemsByType(type, menuItems) {
     menuItems.forEach(item => {
         if (item.type === type) {
             const menuItem = document.createElement('article');
-            const menuName = document.createElement('h4')
-            const menuPrice = document.createElement('p')
-            // const menuImage = document.createElement("img")
+            const menuName = document.createElement('h4');
+            const menuImage = document.createElement("img");
+            const menuPrice = document.createElement('p');
 
-            menuName.textContent = item.name
-            menuPrice.textContent = item.cost
-            menuItem.appendChild(menuName)
-            menuItem.appendChild(menuPrice)
-            // menuItem.appendChild(menuImage)
+            menuName.textContent = item.name;
+            menuPrice.textContent = item.cost;
+            menuImage.src = `../assets/media/${item.image}`;
+
+            menuItem.appendChild(menuName);
+            menuItem.appendChild(menuImage);
+            menuItem.appendChild(menuPrice);
             menuItem.addEventListener('click', function () {
                 addFoodToList(item);
             })
@@ -89,5 +91,5 @@ function getUniqueTypes(menuItems) {
 }
 
 function addFoodToList(foodItem) {
-    console.log(foodItem)
+    console.log(foodItem);
 }
