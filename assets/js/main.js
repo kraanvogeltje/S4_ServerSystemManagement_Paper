@@ -12,11 +12,24 @@ function init() {
 }
 
 function addEventListeners() {
-    backButton.addEventListener('click', goToStart())
+    backButton.addEventListener('click', goToStart)
+
 }
 
 function goToStart(){
     console.log('go back')
+}
+
+function selectType(type) {
+    document.querySelectorAll(`#menuTypes li`).forEach(
+        li_type => {
+            if (li_type === type) {
+                li_type.classList.add("selected")
+            } else {
+                li_type.classList.remove("selected")
+            }
+        }
+    )
 }
 
 function loadMenuTypes() {
@@ -33,6 +46,11 @@ function loadMenuTypes() {
                     displayMenuItemsByType(type, menuItems);
                 });
                 menuTypes.appendChild(listItem);
+            });
+            document.querySelectorAll(`#menuTypes li`).forEach(type => {
+                type.addEventListener('click', function() {
+                    selectType(type);
+                });
             });
         })
         .catch(error => console.log(error));
@@ -54,7 +72,7 @@ function displayMenuItemsByType(type, menuItems) {
             menuItem.appendChild(menuName)
             menuItem.appendChild(menuPrice)
             // menuItem.appendChild(menuImage)
-            menuItem.addEventListener('click', function (f) {
+            menuItem.addEventListener('click', function () {
                 addFoodToList(item);
             })
             foodArticles.appendChild(menuItem)
