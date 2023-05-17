@@ -45,6 +45,7 @@ function loadMenuTypes() {
             uniqueTypes.forEach(type => {
                 const listItem = document.createElement('li');
                 listItem.textContent = type;
+                listItem.classList.add('type');
                 listItem.addEventListener('click', function() {
                     displayMenuItemsByType(type, menuItems);
                 });

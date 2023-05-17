@@ -1,12 +1,18 @@
 body {
     font-family: Arial, sans-serif;
-    min-height: 100%;
     font-size: 1.5rem;
+    position: relative;
+    min-height: 100vh;
 }
 
 h2 {
     font-size: 3rem;
     margin-bottom: 2rem;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 header {
@@ -28,15 +34,12 @@ header img {
 
 button {
     padding: 1rem;
-
 }
 
 main {
     /*background-color: #ffc72c;*/
     /*color: #da291c;*/
 }
-
-
 
 main div.mainHeader {
     width: 100%;
@@ -53,12 +56,19 @@ aside {
     width: 29%;
 }
 
-aside ul {
-    list-style-type: none;
+#menuTypes {
+
+}
+
+#menuTypes .type {
+    list-style-type:none;
+    margin-left: 2rem;
+    padding: 0.5rem;
 }
 
 aside .selected {
     font-weight: bold;
+    list-style-type: none;
 }
 
 section {
@@ -90,7 +100,7 @@ section article img {
 }
 
 footer {
-    /*background-color: #da291c;*/
+    background-color: #ffc72c;
     /*color: #ffc72c;*/
     padding: 20px;
     position: sticky;
