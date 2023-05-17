@@ -19,6 +19,7 @@ function addEventListeners() {
 
 function goToStart(){
     console.log('go back');
+    window.location.href = "../index.html";
 }
 
 function selectType(type) {
@@ -69,9 +70,8 @@ function displayMenuItemsByType(type, menuItems) {
             const menuPrice = document.createElement('p');
 
 
-
             menuName.textContent = item.name;
-            menuPrice.textContent = item.cost;
+            menuPrice.textContent = item.cost.toString() + " €";
             menuImage.src = `../assets/media/${item.image}`;
 
             menuItem.appendChild(menuName);
