@@ -15,11 +15,15 @@ function init() {
 
 function addEventListeners() {
     cancelOrderButton.addEventListener('click', goToStart);
-
+    orderButton.addEventListener('click', goToPayment)
 }
 
 function goToStart(){
     window.location.href = "../index.html";
+}
+
+function  goToPayment() {
+    window.location.href = "./payment_screen.html";
 }
 
 function selectType(type) {

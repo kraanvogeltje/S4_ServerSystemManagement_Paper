@@ -1,0 +1,48 @@
+body {
+    font-family:  Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0; /* Added to remove default body margin */
+}
+
+main {
+    flex: 1;
+    background-color: #ffc72c;
+    color: #da291c;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+h1 {
+    width: 40rem;
+    font-size: 4rem;
+    margin: 4rem auto 4rem;
+}
+
+main img {
+    max-height: 10rem;
+}
+
+footer {
+    height: 10rem;
+    width: 100%;
+    background-color: #da291c;
+    color: #ffc72c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer img {
+    max-height: 100%;
+    align-content: start;
+}
+
+footer p {
+    font-size: 4rem;
+}
+
