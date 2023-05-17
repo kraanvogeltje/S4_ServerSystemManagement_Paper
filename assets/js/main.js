@@ -4,7 +4,8 @@ document.addEventListener('DOMContentLoaded', init);
 const menuTypes = document.querySelector('#menuTypes');
 const foodArticlesHeader = document.querySelector(`#foodItemsHeader`)
 const foodArticles = document.querySelector('#foodItems');
-const backButton = document.querySelector('.back');
+const cancelOrderButton = document.querySelector('.cancel_order')
+const orderButton = document.querySelector('.order')
 const myOrder = document.querySelector(`.myOrder`);
 
 function init() {
@@ -13,7 +14,7 @@ function init() {
 }
 
 function addEventListeners() {
-    backButton.addEventListener('click', goToStart);
+    cancelOrderButton.addEventListener('click', goToStart);
 
 }
 

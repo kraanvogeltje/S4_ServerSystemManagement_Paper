@@ -1,8 +1,12 @@
-
 body {
     font-family: Arial, sans-serif;
     min-height: 100%;
     font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
 }
 
 header {
@@ -18,17 +22,26 @@ header {
     font-size: 4rem;
 }
 
+header img {
+    max-height: 10rem;
+}
+
+button {
+    padding: 1rem;
+
+}
+
 main {
     /*background-color: #ffc72c;*/
     /*color: #da291c;*/
 }
 
-header img {
-    max-height: 10rem;
-}
 
-header button {
-    align-self: end;
+
+main div.mainHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 main div#mainBody{
@@ -40,6 +53,10 @@ aside {
     width: 29%;
 }
 
+aside ul {
+    list-style-type: none;
+}
+
 aside .selected {
     font-weight: bold;
 }
@@ -48,7 +65,7 @@ section {
     width: 69%;
 }
 
-section h2 {
+h2 {
     font-size: 3rem;
     margin-bottom: 2rem;
 }
@@ -78,4 +95,25 @@ footer {
     padding: 20px;
     position: sticky;
     bottom: 0;
+}
+
+footer div.buttons {
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer div.buttons button {
+    width: 45%;
+    font-size: 2rem;
+}
+
+footer .cancel_order {
+    background-color: #da291c;
+}
+
+footer .order {
+    background-color: yellowgreen;
 }
