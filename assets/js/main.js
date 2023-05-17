@@ -19,7 +19,6 @@ function addEventListeners() {
 }
 
 function goToStart(){
-    console.log('go back');
     window.location.href = "../index.html";
 }
 
@@ -36,6 +35,7 @@ function selectType(type) {
 }
 
 function loadMenuTypes() {
+    let firstItem = true;
     fetch('../assets/data/menu.json')
         .then(response => response.json())
         .then(menuItems => {
@@ -50,6 +50,11 @@ function loadMenuTypes() {
                     displayMenuItemsByType(type, menuItems);
                 });
                 menuTypes.appendChild(listItem);
+                if (firstItem) {
+                    firstItem = false;
+                    displayMenuItemsByType(type, menuItems);
+                    selectType(listItem);
+                }
             });
             document.querySelectorAll(`#menuTypes li`).forEach(type => {
                 type.addEventListener('click', function() {
@@ -57,7 +62,7 @@ function loadMenuTypes() {
                 });
             });
         })
-        .catch(error => console.log(error));
+        .catch(error => console.error(error));
 }
 
 function displayMenuItemsByType(type, menuItems) {
