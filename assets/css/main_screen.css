@@ -127,3 +127,13 @@ footer .cancel_order {
 footer .order {
     background-color: yellowgreen;
 }
+
+footer .myOrder {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+footer .myOrder p {
+    width: 33%;
+}

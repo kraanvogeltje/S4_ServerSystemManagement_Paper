@@ -7,6 +7,7 @@ const foodArticles = document.querySelector('#foodItems');
 const cancelOrderButton = document.querySelector('.cancel_order')
 const orderButton = document.querySelector('.order')
 const myOrder = document.querySelector(`.myOrder`);
+const totalPriceElement = document.querySelector('.totalCost');
 
 let order = []
 let totalPrice
@@ -130,15 +131,5 @@ function loadOrder() {
         foodDiv.textContent = `${itemName}: ${amount}`;
         myOrder.appendChild(foodDiv);
     })
-
-    const totalCostElement = document.createElement('div');
-    const totalCostTitel = document.createElement('p');
-    const totalCostPrice = document.createElement('p');
-    totalCostElement.classList.add("totalCost");
-    totalCostTitel.textContent = "Total:"
-    totalCostPrice.textContent = (totalPrice.toFixed(2) + " $");
-    totalCostElement.appendChild(totalCostTitel);
-    totalCostElement.appendChild(totalCostPrice);
-
-    myOrder.appendChild(totalCostElement);
+    totalPriceElement.innerHTML = (totalPrice.toFixed(2) + " $");
 }
