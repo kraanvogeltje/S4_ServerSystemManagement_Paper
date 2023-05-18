@@ -8,6 +8,9 @@ const cancelOrderButton = document.querySelector('.cancel_order')
 const orderButton = document.querySelector('.order')
 const myOrder = document.querySelector(`.myOrder`);
 
+let order = []
+let totalPrice
+
 function init() {
     addEventListeners();
     loadMenuTypes();
@@ -80,7 +83,6 @@ function displayMenuItemsByType(type, menuItems) {
             const menuImage = document.createElement("img");
             const menuPrice = document.createElement('p');
 
-
             menuName.textContent = item.name;
             menuPrice.textContent = item.cost.toString() + " €";
             menuImage.src = `../assets/media/${item.image}`;
@@ -107,5 +109,36 @@ function getUniqueTypes(menuItems) {
 }
 
 function addFoodToList(foodItem) {
-    console.log(foodItem)
+    order.push(foodItem);
+    loadOrder()
+}
+
+function loadOrder() {
+    myOrder.innerHTML = "";
+    const itemCounts = {};
+    totalPrice = 0;
+    // put all selected articles in an object [name, amount]
+    for (const item of order) {
+        const itemTitel = item.querySelector('h4').innerHTML;
+        const itemPrice = parseFloat(item.querySelector('p').innerHTML.slice(0, -2));
+        itemCounts[itemTitel] = (itemCounts[itemTitel] || 0) + 1;
+        totalPrice += itemPrice
+    }
+    // for each article in the object, create a p with the name and amount
+    Object.entries(itemCounts).forEach(([itemName, amount]) => {
+        const foodDiv = document.createElement("p");
+        foodDiv.textContent = `${itemName}: ${amount}`;
+        myOrder.appendChild(foodDiv);
+    })
+
+    const totalCostElement = document.createElement('div');
+    const totalCostTitel = document.createElement('p');
+    const totalCostPrice = document.createElement('p');
+    totalCostElement.classList.add("totalCost");
+    totalCostTitel.textContent = "Total:"
+    totalCostPrice.textContent = (totalPrice.toFixed(2) + " $");
+    totalCostElement.appendChild(totalCostTitel);
+    totalCostElement.appendChild(totalCostPrice);
+
+    myOrder.appendChild(totalCostElement);
 }
